@@ -1,7 +1,7 @@
 """
 Embeddings generation module using Sentence Transformers
 We use all-MiniLM-L6-v2 model which is:
-- Small and fast (good for this demo)
+- Small and fast 
 - Produces 384-dimensional embeddings
 - Works well for semantic similarity
 - Runs locally (no API limits)
@@ -78,3 +78,4 @@ class VectorStore:
                 results.append((self.chunks[idx], float(score)))
 
         return results
+
