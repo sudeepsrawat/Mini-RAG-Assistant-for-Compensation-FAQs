@@ -95,5 +95,13 @@ python rag_system.py
 ```bash
 python rag_local_only.py
 ```
+# Ask a single question
+```bash
+python local_rag.py --question "How is bonus eligibility determined?"
+```
+# Run sample evaluation
+```bash
+python local_rag.py --eval
+```
 
 
