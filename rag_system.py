@@ -49,7 +49,6 @@ class RAGSystem:
 
             if test and test.text:
                 print("✅ Gemini API initialized successfully")
-                print(f"   Model: {self.model_name}")
                 self.gemini_available = True
             else:
                 raise RuntimeError("Gemini test failed")
@@ -76,54 +75,40 @@ class RAGSystem:
     # ------------------ RETRIEVAL ------------------
 
     def retrieve_context(self, query: str, k: int = 5) -> List[Tuple[dict, float]]:
-        """Retrieve top chunks and filter by keywords for better grounding"""
         results = self.vector_store.search(query, k=k)
 
         print(f"\n🔍 Retrieved Context for: '{query}'")
-        print(f"   Found {len(results)} relevant chunks:")
-
         for i, (chunk, score) in enumerate(results, 1):
             print(f"\n   Chunk {i} (Relevance: {score:.1%})")
             print(f"   📄 Source: {chunk['source']}")
             preview = chunk['text'][:250] + ("..." if len(chunk['text']) > 250 else "")
             print(f"   📝 Text: {preview}")
 
-        # Filter chunks with HR keywords for more relevant context
-        query_lower = query.lower()
-        filtered = []
-        for chunk, score in results:
-            text_lower = chunk["text"].lower()
-            if any(keyword in text_lower for keyword in ["eligib", "bonus", "service", "exclude", "hire"]):
-                filtered.append((chunk, score))
-
-        return filtered[:3] if filtered else results[:3]
+        # ✅ RETURN TOP RESULTS DIRECTLY (NO KEYWORD FILTERING)
+        return results[:3]
 
     # ------------------ PROMPT ------------------
 
     def generate_prompt(self, query: str, context_chunks: List[Tuple[dict, float]]) -> str:
-        # Merge chunks from same document
         merged_chunks = {}
         for chunk, _ in context_chunks:
-            source = chunk['source']
-            if source not in merged_chunks:
-                merged_chunks[source] = ""
-            merged_chunks[source] += chunk['text'] + "\n\n"
+            merged_chunks.setdefault(chunk["source"], "")
+            merged_chunks[chunk["source"]] += chunk["text"] + "\n\n"
 
         context_text = ""
         for source, text in merged_chunks.items():
-            # allow full text (no truncation) since docs are small
             context_text += f"Source: {source}\n{text}\n\n"
 
         return f"""
 You are an HR compensation policy assistant.
 
-STRICT RULES:
-- Use ONLY the information in the context below
-- Do NOT infer, assume, or add missing details
-- Do NOT use general HR knowledge
-- If the context does NOT contain the answer, respond EXACTLY with:
+RULES (MANDATORY):
+- Use ONLY the information present in the context
+- Do NOT use external knowledge or assumptions
+- You MAY synthesize across multiple context sections
+- If the context does not clearly answer the question,
+  respond exactly with:
   "The information is not available in the provided documents."
-- The answer MAY be synthesized from multiple context sections if needed
 
 CONTEXT:
 ----------------
@@ -133,7 +118,10 @@ CONTEXT:
 QUESTION:
 {query}
 
-ANSWER (grounded only in context):
+ANSWER (grounded strictly in context):
+- Provide a complete, structured answer
+- Do not stop mid-sentence
+- List all applicable criteria found in the context
 """
 
     # ------------------ GENERATION ------------------
@@ -147,24 +135,18 @@ ANSWER (grounded only in context):
                     "temperature": 0.0,
                     "top_p": 0.8,
                     "top_k": 40,
-                    "max_output_tokens": 500,
+                    "max_output_tokens": 800,
                 }
             )
 
-            # Safe extraction
             if response.text:
                 return response.text.strip()
-
-            if getattr(response, "candidates", None):
-                parts = response.candidates[0].content.parts
-                if parts and hasattr(parts[0], "text"):
-                    return parts[0].text.strip()
 
             return "The information is not available in the provided documents."
 
         except Exception as e:
             print(f"❌ Gemini error: {e}")
-            return "❌ Unable to generate answer due to model error."
+            return "The information is not available in the provided documents."
 
     # ------------------ ASK ------------------
 
@@ -173,22 +155,17 @@ ANSWER (grounded only in context):
         print(f"❓ QUESTION: {question}")
         print("=" * 60)
 
-        retrieved = self.retrieve_context(question, k=5)
+        retrieved = self.retrieve_context(question)
 
-        # Relevance filter
-        relevant_chunks = [(c, s) for c, s in retrieved if s >= 0.40]
+        # ✅ LOWERED THRESHOLD
+        relevant_chunks = [(c, s) for c, s in retrieved if s >= 0.30]
 
         if not relevant_chunks:
             answer = "The information is not available in the provided documents."
             sources = []
         else:
-            if self.use_gemini and getattr(self, "gemini_available", False):
-                print("\n🤖 Generating answer with Gemini...")
-                prompt = self.generate_prompt(question, relevant_chunks)
-                answer = self.generate_with_gemini(prompt)
-            else:
-                answer = "❌ Gemini unavailable."
-
+            prompt = self.generate_prompt(question, relevant_chunks)
+            answer = self.generate_with_gemini(prompt)
             sources = sorted({c["source"] for c, _ in relevant_chunks})
 
         print("\n" + "=" * 60)
