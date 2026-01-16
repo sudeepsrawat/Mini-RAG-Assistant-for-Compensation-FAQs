@@ -1,32 +1,32 @@
 # System Architecture (local)
 
-[Company Policy Documents (.txt)]
-               │
-               ▼
-       Document Loader
- (Paragraph / section chunking,
-  overlap for context)
-               │
-               ▼
-     Embedding Generator
- (SentenceTransformers → 384-d embeddings)
-               │
-               ▼
-        FAISS Vector Store
- (IndexFlatIP, normalized embeddings)
-               │
-               ▼
-      Query / Retrieval Module
-  (Retrieve top-k relevant chunks,
-   threshold filtering by similarity)
-               │
-               ▼
-    Rule-Based Answer Synthesizer
-   (Bullet-style answers, grounded)
-               │
-               ▼
-          Output Answer
-
+            [Company Policy Documents (.txt)]
+                          │
+                          ▼
+                  Document Loader
+           (Chunking paragraphs / sections,
+             overlap for context)
+                          │
+                          ▼
+                Embedding Generator
+       (SentenceTransformers → 384-d embeddings)
+                          │
+                          ▼
+                 FAISS Vector Store
+        (IndexFlatIP, normalized embeddings)
+                          │
+                          ▼
+             Query / Retrieval Module
+       (Retrieve top-k relevant chunks,
+        optional filtering by keywords)
+                          │
+                          ▼
+            Rule-Based Answer Synthesizer
+           (Bullet-style answers, grounded)
+                          │
+                          ▼
+                    Output Answer
+         
 # System Architecture (Gemini)
 
             [Company Policy Documents (.txt)]
@@ -91,4 +91,5 @@ python rag_system.py
 
 ## Run locally without Gemini
 python rag_local_only.py
+
 
