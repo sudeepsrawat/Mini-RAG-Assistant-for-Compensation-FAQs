@@ -1,0 +1,197 @@
+STRUCTURE OVERVIEW AND PHILOSOPHY
+Our salary structure establishes a systematic framework for compensation administration across eight distinct career levels (CL1 through CL8), ensuring internal equity, market competitiveness, and clear career progression paths. Each pay band features defined minimum, midpoint, and maximum salary ranges that reflect market value, role complexity, and organizational impact. This structured approach enables consistent, fair compensation decisions while maintaining flexibility for individual circumstances.
+
+DETAILED CAREER LEVEL ARCHITECTURE
+Level Definitions and Scope:
+Entry/Junior Contributors (CL1-CL2):
+
+CL1 (Associate): Entry-level positions requiring 0-2 years experience, performing tasks under close supervision with limited decision-making authority. Focus on learning and skill development.
+
+CL2 (Analyst): Junior professionals with 2-4 years experience, working independently on routine tasks while receiving guidance on complex matters. Beginning to demonstrate specialized knowledge.
+
+Mid/Senior Individual Contributors (CL3-CL4):
+
+CL3 (Professional): Mid-level roles requiring 4-6 years experience, handling moderate complexity independently while consulting on sophisticated problems. Regular impact on team outcomes.
+
+CL4 (Senior Professional): Senior individual contributors with 6-8+ years experience, serving as subject matter experts who mentor others and influence team direction through technical excellence.
+
+Lead/Principal Contributors (CL5-CL6):
+
+CL5 (Lead/Principal): Senior technical leaders with 8-10+ years experience, driving significant initiatives and providing thought leadership across multiple teams or domains.
+
+CL6 (Senior Principal): Experts with 10-15+ years experience, shaping technical strategy and making decisions with organization-wide impact, often representing the company externally.
+
+Management/Director Levels (CL7-CL8):
+
+CL7 (Manager/Director): People leaders responsible for team performance, talent development, and operational execution within defined business units or functions.
+
+CL8 (Senior Director/VP): Strategic leaders overseeing multiple teams or large organizations, with significant P&L responsibility and enterprise-wide influence.
+
+COMPREHENSIVE PAY BAND EXAMPLES BY FUNCTION
+Technology Roles (Software Engineering Focus):
+CL3 (Software Engineer II): $85,000 - $125,000 (Midpoint: $105,000)
+
+CL4 (Senior Software Engineer): $105,000 - $155,000 (Midpoint: $130,000)
+
+CL5 (Staff Software Engineer): $130,000 - $190,000 (Midpoint: $160,000)
+
+CL6 (Principal Software Engineer): $160,000 - $235,000 (Midpoint: $197,500)
+
+CL7 (Engineering Manager): $195,000 - $285,000 (Midpoint: $240,000)
+
+CL8 (Director of Engineering): $240,000 - $350,000 (Midpoint: $295,000)
+
+Business Functions (Product Management Example):
+CL3 (Associate Product Manager): $90,000 - $130,000 (Midpoint: $110,000)
+
+CL4 (Product Manager): $110,000 - $160,000 (Midpoint: $135,000)
+
+CL5 (Senior Product Manager): $135,000 - $195,000 (Midpoint: $165,000)
+
+CL6 (Principal Product Manager): $165,000 - $240,000 (Midpoint: $202,500)
+
+CL7 (Director of Product): $200,000 - $290,000 (Midpoint: $245,000)
+
+CL8 (VP of Product): $250,000 - $365,000 (Midpoint: $307,500)
+
+SALARY PLACEMENT AND ADJUSTMENT FACTORS
+Primary Determinants (Weighted Scoring):
+1. Experience and Qualifications (25%):
+
+Years of relevant industry experience
+
+Educational credentials and certifications
+
+Specialized technical skills and proficiencies
+
+Proven track record of success in similar roles
+
+2. Market Data Benchmarking (30%):
+
+Industry-specific salary survey participation (Radford, Mercer, Option Impact)
+
+Geographic market analysis (metro vs. non-metro differentials)
+
+Real-time compensation intelligence platforms
+
+Peer company benchmarking (15-20 comparable organizations)
+
+3. Internal Equity Analysis (20%):
+
+Comparative analysis with similar roles internally
+
+Career level alignment validation
+
+Compensation ratio (compa-ratio) positioning
+
+Team and department parity considerations
+
+4. Geographic Differentials (15%):
+
+Tier 1 (Major Metro): +25-30% (SF, NYC, London)
+
+Tier 2 (Large Cities): +15-20% (Boston, Seattle, Toronto)
+
+Tier 3 (Medium Cities): +5-10% (Austin, Denver, Atlanta)
+
+Tier 4 (Standard): Base rate (most locations)
+
+Remote Worker Policy: Tied to primary work location
+
+5. Performance and Impact (10%):
+
+Historical performance ratings
+
+Documented business impact
+
+Critical skill retention considerations
+
+Succession planning and leadership potential
+
+MID-YEAR ADJUSTMENT PROTOCOL
+Approved Scenarios and Processes:
+Promotion Compensation:
+
+Standard increase range: 8-15% of base salary
+
+Placement within new band: Target 85-95% of midpoint
+
+Effective date: 1st of month following approval
+
+Required documentation: Promotion business case
+
+Critical Retention Situations:
+
+Trigger: Written competing offer + high replacement cost
+
+Maximum adjustment: 20% or to market midpoint
+
+Required approvals: VP+ level + HR Director
+
+Conditions: Minimum 12-month retention agreement
+
+Significant Responsibility Expansion:
+
+Criteria: >30% increase in scope/impact
+
+Typical increase: 5-10%
+
+Documentation: Updated job description + impact analysis
+
+Review: Compensation Committee for increases >15%
+
+Market Misalignment Correction:
+
+Process: Quarterly market analysis batches
+
+Threshold: >15% below market for similar roles
+
+Typical adjustment: To 90% of market midpoint
+
+Timing: Quarterly implementation cycles
+
+GOVERNANCE AND COMPLIANCE
+Approval Authority Matrix:
+Standard Increases (<10%): Manager + HR Business Partner
+
+Significant Increases (10-15%): Director + HR Manager
+
+Major Increases (>15%): VP + Head of Compensation
+
+Exception Cases: Compensation Committee review
+
+Annual Band Adjustment Process:
+Timeline:
+
+Q3: Market data collection and analysis
+
+October: Preliminary band recommendations
+
+November: Leadership review and calibration
+
+December: Final approval and communication
+
+January 1: Effective date for new ranges
+
+Adjustment Factors:
+
+Market movement indices (70% weight)
+
+Economic indicators (CPI, ECI) (20%)
+
+Company performance metrics (10%)
+
+Budget constraints and affordability
+
+Compliance and Documentation:
+All salary decisions documented in HRIS
+
+Regular pay equity audits (biannual)
+
+SOX controls for approval workflows
+
+Complete audit trail maintained for 7 years
+
+Annual compliance certification required
+
+This comprehensive salary structure ensures competitive, fair, and consistent compensation practices that support our talent strategy while maintaining fiscal responsibility and regulatory compliance.
