@@ -87,9 +87,13 @@ Entire retrieval, embeddings, and answer synthesis run without external calls, e
 # Usage
 
 ## Run using Gemini
+```bash
 python rag_system.py
+```
 
 ## Run locally without Gemini
+```bash
 python rag_local_only.py
+```
 
 
