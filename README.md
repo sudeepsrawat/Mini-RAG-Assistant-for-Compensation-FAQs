@@ -103,17 +103,17 @@ python local_rag.py --question "How is bonus eligibility determined?"
 python local_rag.py --eval
 ```
 # Screenshots
-<img width="1223" height="822" alt="Screenshot 2026-01-16 170041" src="https://github.com/user-attachments/assets/7c6be17e-9c21-4caa-a99a-3b6cb36be6d2" />
 
+1
+<img width="1223" height="822" alt="Screenshot 2026-01-16 170041" src="https://github.com/user-attachments/assets/7c6be17e-9c21-4caa-a99a-3b6cb36be6d2" />                               
 
+2
+<img width="1226" height="448" alt="Screenshot 2026-01-16 170142" src="https://github.com/user-attachments/assets/7bf91721-e74e-4d3e-bad1-da0cfa276320" />     
 
-<img width="1226" height="448" alt="Screenshot 2026-01-16 170142" src="https://github.com/user-attachments/assets/7bf91721-e74e-4d3e-bad1-da0cfa276320" />
-
-
-
-
-<img width="1224" height="658" alt="Screenshot 2026-01-16 170204" src="https://github.com/user-attachments/assets/64f8b7e3-3292-4f08-9bb4-014c1f87a3ca" />
-
+3
+<img width="1224" height="658" alt="Screenshot 2026-01-16 170204" src="https://github.com/user-attachments/assets/64f8b7e3-3292-4f08-9bb4-014c1f87a3ca" />      
+      
+     
 
 
 
